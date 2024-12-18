@@ -4,6 +4,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 
 import { Inter as FontSans } from "next/font/google";
+import Provider from "./Provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -11,7 +12,7 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "LiveDocs",
+  title: "Scribbly",
   description: "Your go-to collaborative editor",
 };
 
@@ -34,7 +35,7 @@ export default function RootLayout({
         <body
           className={`min-h-screen bg-background font-sans ${fontSans.variable} antialiased`}
         >
-          {children}
+          <Provider>{children}</Provider>
         </body>
       </html>
     </ClerkProvider>
