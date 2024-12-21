@@ -1,0 +1,754 @@
+diff --git a/node_modules/@liveblocks/react-ui/dist/components.js b/node_modules/@liveblocks/react-ui/dist/components.js
+index 8d4c02a..c29fa28 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components.js
++++ b/node_modules/@liveblocks/react-ui/dist/components.js
+@@ -1,9 +1,9 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+ var react = require('react');
+ 
+-"use client";
+ const defaultComponents = {
+   Anchor: "a"
+ };
+diff --git a/node_modules/@liveblocks/react-ui/dist/components.mjs b/node_modules/@liveblocks/react-ui/dist/components.mjs
+index f3b8c35..4382aeb 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/components.mjs
+@@ -1,7 +1,7 @@
++"use client";
+ import { jsx } from 'react/jsx-runtime';
+ import { createContext, useContext, useMemo } from 'react';
+ 
+-"use client";
+ const defaultComponents = {
+   Anchor: "a"
+ };
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/Comment.js b/node_modules/@liveblocks/react-ui/dist/components/Comment.js
+index b165ab4..7b80255 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/Comment.js
++++ b/node_modules/@liveblocks/react-ui/dist/components/Comment.js
+@@ -1,3 +1,4 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+@@ -54,7 +55,6 @@ function _interopNamespaceDefault(e) {
+ 
+ var TogglePrimitive__namespace = /*#__PURE__*/_interopNamespaceDefault(TogglePrimitive);
+ 
+-"use client";
+ const REACTIONS_TRUNCATE = 5;
+ function CommentMention({
+   userId,
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/Comment.mjs b/node_modules/@liveblocks/react-ui/dist/components/Comment.mjs
+index e7aa022..9fef74c 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/Comment.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/components/Comment.mjs
+@@ -1,3 +1,4 @@
++"use client";
+ import { jsxs, jsx, Fragment } from 'react/jsx-runtime';
+ import { useAddRoomCommentReaction, useRemoveRoomCommentReaction, useRoomAttachmentUrl, useMarkRoomThreadAsRead, useDeleteRoomComment, useEditRoomComment } from '@liveblocks/react/_private';
+ import * as TogglePrimitive from '@radix-ui/react-toggle';
+@@ -33,7 +34,6 @@ import { TooltipProvider } from '@radix-ui/react-tooltip';
+ import { PopoverTrigger } from '@radix-ui/react-popover';
+ import { DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu';
+ 
+-"use client";
+ const REACTIONS_TRUNCATE = 5;
+ function CommentMention({
+   userId,
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/Composer.js b/node_modules/@liveblocks/react-ui/dist/components/Composer.js
+index b0dc884..c1fc845 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/Composer.js
++++ b/node_modules/@liveblocks/react-ui/dist/components/Composer.js
+@@ -1,3 +1,4 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+@@ -31,7 +32,6 @@ var User = require('./internal/User.js');
+ var PopoverPrimitive = require('@radix-ui/react-popover');
+ var TooltipPrimitive = require('@radix-ui/react-tooltip');
+ 
+-"use client";
+ function ComposerInsertMentionEditorAction({
+   label,
+   tooltipLabel,
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/Composer.mjs b/node_modules/@liveblocks/react-ui/dist/components/Composer.mjs
+index 3b92257..ac781f2 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/Composer.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/components/Composer.mjs
+@@ -1,3 +1,4 @@
++"use client";
+ import { jsx, jsxs, Fragment } from 'react/jsx-runtime';
+ import { Permission } from '@liveblocks/core';
+ import { useRoomOrNull, useCreateRoomThread, useCreateRoomComment, useEditRoomComment, useResolveMentionSuggestions, useRoomPermissions } from '@liveblocks/react/_private';
+@@ -29,7 +30,6 @@ import { User } from './internal/User.mjs';
+ import { PopoverTrigger } from '@radix-ui/react-popover';
+ import { TooltipProvider } from '@radix-ui/react-tooltip';
+ 
+-"use client";
+ function ComposerInsertMentionEditorAction({
+   label,
+   tooltipLabel,
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/HistoryVersionSummary.js b/node_modules/@liveblocks/react-ui/dist/components/HistoryVersionSummary.js
+index a584ddd..f8625b8 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/HistoryVersionSummary.js
++++ b/node_modules/@liveblocks/react-ui/dist/components/HistoryVersionSummary.js
+@@ -1,3 +1,4 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+@@ -9,7 +10,6 @@ var List = require('./internal/List.js');
+ var User = require('./internal/User.js');
+ var Timestamp = require('../primitives/Timestamp.js');
+ 
+-"use client";
+ const AUTHORS_TRUNCATE = 3;
+ const HistoryVersionSummary = react.forwardRef(({ version, selected, className, ...props }, forwardedRef) => {
+   const $ = overrides.useOverrides();
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/HistoryVersionSummary.mjs b/node_modules/@liveblocks/react-ui/dist/components/HistoryVersionSummary.mjs
+index 4758746..885d68b 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/HistoryVersionSummary.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/components/HistoryVersionSummary.mjs
+@@ -1,3 +1,4 @@
++"use client";
+ import { jsxs, jsx } from 'react/jsx-runtime';
+ import { forwardRef } from 'react';
+ import { useOverrides } from '../overrides.mjs';
+@@ -7,7 +8,6 @@ import { List } from './internal/List.mjs';
+ import { User } from './internal/User.mjs';
+ import { Timestamp } from '../primitives/Timestamp.mjs';
+ 
+-"use client";
+ const AUTHORS_TRUNCATE = 3;
+ const HistoryVersionSummary = forwardRef(({ version, selected, className, ...props }, forwardedRef) => {
+   const $ = useOverrides();
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/HistoryVersionSummaryList.js b/node_modules/@liveblocks/react-ui/dist/components/HistoryVersionSummaryList.js
+index e25a366..32137f7 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/HistoryVersionSummaryList.js
++++ b/node_modules/@liveblocks/react-ui/dist/components/HistoryVersionSummaryList.js
+@@ -1,10 +1,10 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+ var react = require('react');
+ var classNames = require('../utils/class-names.js');
+ 
+-"use client";
+ const HistoryVersionSummaryList = react.forwardRef(({ children, className, ...props }, forwardedRef) => {
+   return /* @__PURE__ */ jsxRuntime.jsx("ol", {
+     className: classNames.classNames(
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/HistoryVersionSummaryList.mjs b/node_modules/@liveblocks/react-ui/dist/components/HistoryVersionSummaryList.mjs
+index a03885a..c8bc606 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/HistoryVersionSummaryList.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/components/HistoryVersionSummaryList.mjs
+@@ -1,8 +1,8 @@
++"use client";
+ import { jsx } from 'react/jsx-runtime';
+ import { forwardRef, Children } from 'react';
+ import { classNames } from '../utils/class-names.mjs';
+ 
+-"use client";
+ const HistoryVersionSummaryList = forwardRef(({ children, className, ...props }, forwardedRef) => {
+   return /* @__PURE__ */ jsx("ol", {
+     className: classNames(
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/InboxNotification.js b/node_modules/@liveblocks/react-ui/dist/components/InboxNotification.js
+index 2fb062e..4683c9e 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/InboxNotification.js
++++ b/node_modules/@liveblocks/react-ui/dist/components/InboxNotification.js
+@@ -1,3 +1,4 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+@@ -26,7 +27,6 @@ var Tooltip = require('./internal/Tooltip.js');
+ var User = require('./internal/User.js');
+ var DropdownMenuPrimitive = require('@radix-ui/react-dropdown-menu');
+ 
+-"use client";
+ const InboxNotificationLayout = react.forwardRef(
+   ({
+     inboxNotification,
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/InboxNotification.mjs b/node_modules/@liveblocks/react-ui/dist/components/InboxNotification.mjs
+index 58b54f8..48afa00 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/InboxNotification.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/components/InboxNotification.mjs
+@@ -1,3 +1,4 @@
++"use client";
+ import { jsx, jsxs, Fragment } from 'react/jsx-runtime';
+ import { assertNever, console } from '@liveblocks/core';
+ import { useMarkInboxNotificationAsRead, useDeleteInboxNotification, useInboxNotificationThread, useRoomInfo } from '@liveblocks/react';
+@@ -24,7 +25,6 @@ import { Tooltip } from './internal/Tooltip.mjs';
+ import { User } from './internal/User.mjs';
+ import { DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu';
+ 
+-"use client";
+ const InboxNotificationLayout = forwardRef(
+   ({
+     inboxNotification,
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/InboxNotificationList.js b/node_modules/@liveblocks/react-ui/dist/components/InboxNotificationList.js
+index 2f9793c..176ea90 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/InboxNotificationList.js
++++ b/node_modules/@liveblocks/react-ui/dist/components/InboxNotificationList.js
+@@ -1,3 +1,4 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+@@ -5,7 +6,6 @@ var react = require('react');
+ var classNames = require('../utils/class-names.js');
+ var useVisible = require('../utils/use-visible.js');
+ 
+-"use client";
+ function ReachEndMarker({
+   enabled,
+   onReachEnd
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/InboxNotificationList.mjs b/node_modules/@liveblocks/react-ui/dist/components/InboxNotificationList.mjs
+index 3653282..a49dfd8 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/InboxNotificationList.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/components/InboxNotificationList.mjs
+@@ -1,9 +1,9 @@
++"use client";
+ import { jsx, jsxs } from 'react/jsx-runtime';
+ import { useRef, forwardRef, Children } from 'react';
+ import { classNames } from '../utils/class-names.mjs';
+ import { useVisibleCallback } from '../utils/use-visible.mjs';
+ 
+-"use client";
+ function ReachEndMarker({
+   enabled,
+   onReachEnd
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/Thread.js b/node_modules/@liveblocks/react-ui/dist/components/Thread.js
+index 6baf066..b0bac05 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/Thread.js
++++ b/node_modules/@liveblocks/react-ui/dist/components/Thread.js
+@@ -1,3 +1,4 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+@@ -36,7 +37,6 @@ function _interopNamespaceDefault(e) {
+ 
+ var TogglePrimitive__namespace = /*#__PURE__*/_interopNamespaceDefault(TogglePrimitive);
+ 
+-"use client";
+ const Thread = react.forwardRef(
+   ({
+     thread,
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/Thread.mjs b/node_modules/@liveblocks/react-ui/dist/components/Thread.mjs
+index 0f6295e..38ba159 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/Thread.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/components/Thread.mjs
+@@ -1,3 +1,4 @@
++"use client";
+ import { jsx, jsxs } from 'react/jsx-runtime';
+ import { useThreadSubscription } from '@liveblocks/react';
+ import { useMarkRoomThreadAsResolved, useMarkRoomThreadAsUnresolved } from '@liveblocks/react/_private';
+@@ -15,7 +16,6 @@ import { Button } from './internal/Button.mjs';
+ import { Tooltip } from './internal/Tooltip.mjs';
+ import { TooltipProvider } from '@radix-ui/react-tooltip';
+ 
+-"use client";
+ const Thread = forwardRef(
+   ({
+     thread,
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/internal/Attachment.js b/node_modules/@liveblocks/react-ui/dist/components/internal/Attachment.js
+index 4bdd62a..c8fe598 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/internal/Attachment.js
++++ b/node_modules/@liveblocks/react-ui/dist/components/internal/Attachment.js
+@@ -1,3 +1,4 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+@@ -14,7 +15,6 @@ var formatFileSize = require('../../utils/format-file-size.js');
+ var Tooltip = require('./Tooltip.js');
+ var utils = require('../../primitives/Composer/utils.js');
+ 
+-"use client";
+ const MAX_DISPLAYED_MEDIA_SIZE = 60 * 1024 * 1024;
+ const fileExtensionRegex = /^(.+?)(\.[^.]+)?$/;
+ function splitFileName(name) {
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/internal/Attachment.mjs b/node_modules/@liveblocks/react-ui/dist/components/internal/Attachment.mjs
+index 2e0ce89..2b076da 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/internal/Attachment.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/components/internal/Attachment.mjs
+@@ -1,3 +1,4 @@
++"use client";
+ import { jsx, jsxs, Fragment } from 'react/jsx-runtime';
+ import { useRoomAttachmentUrl } from '@liveblocks/react/_private';
+ import { memo, useMemo, useState, useCallback } from 'react';
+@@ -12,7 +13,6 @@ import { formatFileSize } from '../../utils/format-file-size.mjs';
+ import { Tooltip } from './Tooltip.mjs';
+ import { AttachmentTooLargeError } from '../../primitives/Composer/utils.mjs';
+ 
+-"use client";
+ const MAX_DISPLAYED_MEDIA_SIZE = 60 * 1024 * 1024;
+ const fileExtensionRegex = /^(.+?)(\.[^.]+)?$/;
+ function splitFileName(name) {
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/internal/Avatar.js b/node_modules/@liveblocks/react-ui/dist/components/internal/Avatar.js
+index 4071cd0..8fd6c41 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/internal/Avatar.js
++++ b/node_modules/@liveblocks/react-ui/dist/components/internal/Avatar.js
+@@ -1,3 +1,4 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+@@ -6,7 +7,6 @@ var react$1 = require('react');
+ var classNames = require('../../utils/class-names.js');
+ var getInitials = require('../../utils/get-initials.js');
+ 
+-"use client";
+ function Avatar({ userId, className, ...props }) {
+   const { user, isLoading } = react.useUser(userId);
+   const resolvedUserName = react$1.useMemo(() => user?.name, [user]);
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/internal/Avatar.mjs b/node_modules/@liveblocks/react-ui/dist/components/internal/Avatar.mjs
+index d5e5865..3c44b8b 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/internal/Avatar.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/components/internal/Avatar.mjs
+@@ -1,10 +1,10 @@
++"use client";
+ import { jsxs, jsx } from 'react/jsx-runtime';
+ import { useUser } from '@liveblocks/react';
+ import { useMemo } from 'react';
+ import { classNames } from '../../utils/class-names.mjs';
+ import { getInitials } from '../../utils/get-initials.mjs';
+ 
+-"use client";
+ function Avatar({ userId, className, ...props }) {
+   const { user, isLoading } = useUser(userId);
+   const resolvedUserName = useMemo(() => user?.name, [user]);
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/internal/Button.js b/node_modules/@liveblocks/react-ui/dist/components/internal/Button.js
+index e70b018..f949fa6 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/internal/Button.js
++++ b/node_modules/@liveblocks/react-ui/dist/components/internal/Button.js
+@@ -1,10 +1,10 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+ var react = require('react');
+ var classNames = require('../../utils/class-names.js');
+ 
+-"use client";
+ const Button = react.forwardRef(
+   ({
+     variant = "default",
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/internal/Button.mjs b/node_modules/@liveblocks/react-ui/dist/components/internal/Button.mjs
+index f51deef..03875fe 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/internal/Button.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/components/internal/Button.mjs
+@@ -1,8 +1,8 @@
++"use client";
+ import { jsx } from 'react/jsx-runtime';
+ import { forwardRef } from 'react';
+ import { classNames } from '../../utils/class-names.mjs';
+ 
+-"use client";
+ const Button = forwardRef(
+   ({
+     variant = "default",
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/internal/Dropdown.js b/node_modules/@liveblocks/react-ui/dist/components/internal/Dropdown.js
+index a3284d5..fdb60dd 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/internal/Dropdown.js
++++ b/node_modules/@liveblocks/react-ui/dist/components/internal/Dropdown.js
+@@ -1,3 +1,4 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+@@ -27,7 +28,6 @@ function _interopNamespaceDefault(e) {
+ 
+ var DropdownMenuPrimitive__namespace = /*#__PURE__*/_interopNamespaceDefault(DropdownMenuPrimitive);
+ 
+-"use client";
+ function Dropdown({
+   children,
+   content,
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/internal/Dropdown.mjs b/node_modules/@liveblocks/react-ui/dist/components/internal/Dropdown.mjs
+index 32f86c6..22d8065 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/internal/Dropdown.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/components/internal/Dropdown.mjs
+@@ -1,3 +1,4 @@
++"use client";
+ import { jsxs, jsx } from 'react/jsx-runtime';
+ import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
+ export { DropdownMenuTrigger as DropdownTrigger } from '@radix-ui/react-dropdown-menu';
+@@ -7,7 +8,6 @@ import { FLOATING_ELEMENT_SIDE_OFFSET, FLOATING_ELEMENT_COLLISION_PADDING } from
+ import { useOverrides } from '../../overrides.mjs';
+ import { classNames } from '../../utils/class-names.mjs';
+ 
+-"use client";
+ function Dropdown({
+   children,
+   content,
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/internal/Room.js b/node_modules/@liveblocks/react-ui/dist/components/internal/Room.js
+index ae728b2..b845758 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/internal/Room.js
++++ b/node_modules/@liveblocks/react-ui/dist/components/internal/Room.js
+@@ -1,3 +1,4 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+@@ -5,7 +6,6 @@ var react = require('@liveblocks/react');
+ var react$1 = require('react');
+ var classNames = require('../../utils/class-names.js');
+ 
+-"use client";
+ function Room({ roomId, className, ...props }) {
+   const { info, isLoading } = react.useRoomInfo(roomId);
+   const resolvedRoomName = react$1.useMemo(() => {
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/internal/Room.mjs b/node_modules/@liveblocks/react-ui/dist/components/internal/Room.mjs
+index e855482..2987fb5 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/internal/Room.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/components/internal/Room.mjs
+@@ -1,9 +1,9 @@
++"use client";
+ import { jsx } from 'react/jsx-runtime';
+ import { useRoomInfo } from '@liveblocks/react';
+ import { useMemo } from 'react';
+ import { classNames } from '../../utils/class-names.mjs';
+ 
+-"use client";
+ function Room({ roomId, className, ...props }) {
+   const { info, isLoading } = useRoomInfo(roomId);
+   const resolvedRoomName = useMemo(() => {
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/internal/Tooltip.js b/node_modules/@liveblocks/react-ui/dist/components/internal/Tooltip.js
+index c6e9d4d..6875073 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/internal/Tooltip.js
++++ b/node_modules/@liveblocks/react-ui/dist/components/internal/Tooltip.js
+@@ -1,3 +1,4 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+@@ -27,7 +28,6 @@ function _interopNamespaceDefault(e) {
+ 
+ var TooltipPrimitive__namespace = /*#__PURE__*/_interopNamespaceDefault(TooltipPrimitive);
+ 
+-"use client";
+ const KEYS = {
+   alt: () => ({ title: "Alt", key: "\u2325" }),
+   mod: () => isApple.isApple() ? { title: "Command", key: "\u2318" } : { title: "Ctrl", key: "\u2303" },
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/internal/Tooltip.mjs b/node_modules/@liveblocks/react-ui/dist/components/internal/Tooltip.mjs
+index 3451f7f..ba7c8fb 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/internal/Tooltip.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/components/internal/Tooltip.mjs
+@@ -1,3 +1,4 @@
++"use client";
+ import { jsxs, jsx, Fragment } from 'react/jsx-runtime';
+ import * as TooltipPrimitive from '@radix-ui/react-tooltip';
+ export { TooltipProvider } from '@radix-ui/react-tooltip';
+@@ -7,7 +8,6 @@ import { FLOATING_ELEMENT_SIDE_OFFSET, FLOATING_ELEMENT_COLLISION_PADDING } from
+ import { classNames } from '../../utils/class-names.mjs';
+ import { isApple } from '../../utils/is-apple.mjs';
+ 
+-"use client";
+ const KEYS = {
+   alt: () => ({ title: "Alt", key: "\u2325" }),
+   mod: () => isApple() ? { title: "Command", key: "\u2318" } : { title: "Ctrl", key: "\u2303" },
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/internal/User.js b/node_modules/@liveblocks/react-ui/dist/components/internal/User.js
+index 65d71dc..87c909e 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/internal/User.js
++++ b/node_modules/@liveblocks/react-ui/dist/components/internal/User.js
+@@ -1,3 +1,4 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+@@ -7,7 +8,6 @@ var overrides = require('../../overrides.js');
+ var shared = require('../../shared.js');
+ var classNames = require('../../utils/class-names.js');
+ 
+-"use client";
+ function User({ userId, replaceSelf, className, ...props }) {
+   const currentId = shared.useCurrentUserId();
+   const { user, isLoading } = react.useUser(userId);
+diff --git a/node_modules/@liveblocks/react-ui/dist/components/internal/User.mjs b/node_modules/@liveblocks/react-ui/dist/components/internal/User.mjs
+index fca9d44..21d23d0 100644
+--- a/node_modules/@liveblocks/react-ui/dist/components/internal/User.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/components/internal/User.mjs
+@@ -1,3 +1,4 @@
++"use client";
+ import { jsx } from 'react/jsx-runtime';
+ import { useUser } from '@liveblocks/react';
+ import { useMemo } from 'react';
+@@ -5,7 +6,6 @@ import { useOverrides } from '../../overrides.mjs';
+ import { useCurrentUserId } from '../../shared.mjs';
+ import { classNames } from '../../utils/class-names.mjs';
+ 
+-"use client";
+ function User({ userId, replaceSelf, className, ...props }) {
+   const currentId = useCurrentUserId();
+   const { user, isLoading } = useUser(userId);
+diff --git a/node_modules/@liveblocks/react-ui/dist/config.js b/node_modules/@liveblocks/react-ui/dist/config.js
+index 8ab2b7d..681d037 100644
+--- a/node_modules/@liveblocks/react-ui/dist/config.js
++++ b/node_modules/@liveblocks/react-ui/dist/config.js
+@@ -1,3 +1,4 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+@@ -5,7 +6,6 @@ var react = require('react');
+ var components = require('./components.js');
+ var overrides = require('./overrides.js');
+ 
+-"use client";
+ const LiveblocksUIConfigContext = react.createContext({});
+ function useLiveblocksUIConfig() {
+   return react.useContext(LiveblocksUIConfigContext);
+diff --git a/node_modules/@liveblocks/react-ui/dist/config.mjs b/node_modules/@liveblocks/react-ui/dist/config.mjs
+index 2bd95ab..4b18dc1 100644
+--- a/node_modules/@liveblocks/react-ui/dist/config.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/config.mjs
+@@ -1,9 +1,9 @@
++"use client";
+ import { jsx } from 'react/jsx-runtime';
+ import { createContext, useContext, useMemo } from 'react';
+ import { ComponentsProvider } from './components.mjs';
+ import { OverridesProvider } from './overrides.mjs';
+ 
+-"use client";
+ const LiveblocksUIConfigContext = createContext({});
+ function useLiveblocksUIConfig() {
+   return useContext(LiveblocksUIConfigContext);
+diff --git a/node_modules/@liveblocks/react-ui/dist/overrides.js b/node_modules/@liveblocks/react-ui/dist/overrides.js
+index 6d2f51b..bdf3e9c 100644
+--- a/node_modules/@liveblocks/react-ui/dist/overrides.js
++++ b/node_modules/@liveblocks/react-ui/dist/overrides.js
+@@ -1,3 +1,4 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+@@ -6,7 +7,6 @@ var react = require('react');
+ var Emoji = require('./components/internal/Emoji.js');
+ var pluralize = require('./utils/pluralize.js');
+ 
+-"use client";
+ const defaultOverrides = {
+   locale: "en",
+   dir: "ltr",
+diff --git a/node_modules/@liveblocks/react-ui/dist/overrides.mjs b/node_modules/@liveblocks/react-ui/dist/overrides.mjs
+index af6c1bb..5f881d1 100644
+--- a/node_modules/@liveblocks/react-ui/dist/overrides.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/overrides.mjs
+@@ -1,10 +1,10 @@
++"use client";
+ import { jsxs, Fragment, jsx } from 'react/jsx-runtime';
+ import { assertNever } from '@liveblocks/core';
+ import { createContext, useContext, useMemo } from 'react';
+ import { Emoji } from './components/internal/Emoji.mjs';
+ import { pluralize } from './utils/pluralize.mjs';
+ 
+-"use client";
+ const defaultOverrides = {
+   locale: "en",
+   dir: "ltr",
+diff --git a/node_modules/@liveblocks/react-ui/dist/primitives/Composer/index.js b/node_modules/@liveblocks/react-ui/dist/primitives/Composer/index.js
+index 1163344..cac401c 100644
+--- a/node_modules/@liveblocks/react-ui/dist/primitives/Composer/index.js
++++ b/node_modules/@liveblocks/react-ui/dist/primitives/Composer/index.js
+@@ -1,3 +1,4 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+@@ -51,7 +52,6 @@ function _interopNamespaceDefault(e) {
+ 
+ var TogglePrimitive__namespace = /*#__PURE__*/_interopNamespaceDefault(TogglePrimitive);
+ 
+-"use client";
+ const MENTION_SUGGESTIONS_POSITION = "top";
+ const FLOATING_TOOLBAR_POSITION = "top";
+ const COMPOSER_MENTION_NAME = "ComposerMention";
+diff --git a/node_modules/@liveblocks/react-ui/dist/primitives/Composer/index.mjs b/node_modules/@liveblocks/react-ui/dist/primitives/Composer/index.mjs
+index 4282d5c..5f1a462 100644
+--- a/node_modules/@liveblocks/react-ui/dist/primitives/Composer/index.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/primitives/Composer/index.mjs
+@@ -1,3 +1,4 @@
++"use client";
+ import { jsxs, jsx } from 'react/jsx-runtime';
+ import { createCommentAttachmentId, makeEventSource } from '@liveblocks/core';
+ import { useClientOrNull, useResolveMentionSuggestions, useMentionSuggestions, useRoomOrNull, useSyncSource } from '@liveblocks/react/_private';
+@@ -30,7 +31,6 @@ import { toAbsoluteUrl } from '../Comment/utils.mjs';
+ import { useComposerEditorContext, useComposer, ComposerSuggestionsContext, ComposerFloatingToolbarContext, useComposerFloatingToolbarContext, useComposerSuggestionsContext, ComposerEditorContext, ComposerAttachmentsContext, ComposerContext, useComposerAttachmentsContext } from './contexts.mjs';
+ import { useContentZIndex, useFloatingWithOptions, getSideAndAlignFromFloatingPlacement, commentBodyToComposerBody, useComposerAttachmentsManager, composerBodyToCommentBody, useComposerAttachmentsDropArea } from './utils.mjs';
+ 
+-"use client";
+ const MENTION_SUGGESTIONS_POSITION = "top";
+ const FLOATING_TOOLBAR_POSITION = "top";
+ const COMPOSER_MENTION_NAME = "ComposerMention";
+diff --git a/node_modules/@liveblocks/react-ui/dist/primitives/EmojiPicker/index.js b/node_modules/@liveblocks/react-ui/dist/primitives/EmojiPicker/index.js
+index 4fce6d4..a27dc34 100644
+--- a/node_modules/@liveblocks/react-ui/dist/primitives/EmojiPicker/index.js
++++ b/node_modules/@liveblocks/react-ui/dist/primitives/EmojiPicker/index.js
+@@ -1,3 +1,4 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+@@ -11,7 +12,6 @@ var Emoji = require('../internal/Emoji.js');
+ var contexts = require('./contexts.js');
+ var utils = require('./utils.js');
+ 
+-"use client";
+ const DEFAULT_COLUMNS = 10;
+ const DEFAULT_LOCALE = "en";
+ const LOADING_MINIMUM_TIMEOUT = 100;
+diff --git a/node_modules/@liveblocks/react-ui/dist/primitives/EmojiPicker/index.mjs b/node_modules/@liveblocks/react-ui/dist/primitives/EmojiPicker/index.mjs
+index 8ba7dfe..4fcafa4 100644
+--- a/node_modules/@liveblocks/react-ui/dist/primitives/EmojiPicker/index.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/primitives/EmojiPicker/index.mjs
+@@ -1,3 +1,4 @@
++"use client";
+ import { jsx, jsxs } from 'react/jsx-runtime';
+ import { Slot } from '@radix-ui/react-slot';
+ import { useRef, useTransition, useState, useCallback, useEffect, forwardRef, useMemo, useLayoutEffect } from 'react';
+@@ -9,7 +10,6 @@ import { Emoji } from '../internal/Emoji.mjs';
+ import { EmojiPickerContext, useEmojiPicker } from './contexts.mjs';
+ import { filterEmojis, generateEmojiPickerData, getEmojiData } from './utils.mjs';
+ 
+-"use client";
+ const DEFAULT_COLUMNS = 10;
+ const DEFAULT_LOCALE = "en";
+ const LOADING_MINIMUM_TIMEOUT = 100;
+diff --git a/node_modules/@liveblocks/react-ui/dist/primitives/FileSize.js b/node_modules/@liveblocks/react-ui/dist/primitives/FileSize.js
+index 7ede94b..4ce80e0 100644
+--- a/node_modules/@liveblocks/react-ui/dist/primitives/FileSize.js
++++ b/node_modules/@liveblocks/react-ui/dist/primitives/FileSize.js
+@@ -1,3 +1,4 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+@@ -5,7 +6,6 @@ var reactSlot = require('@radix-ui/react-slot');
+ var react = require('react');
+ var formatFileSize = require('../utils/format-file-size.js');
+ 
+-"use client";
+ const FILE_SIZE_NAME = "FileSize";
+ const FileSize = react.forwardRef(
+   ({
+diff --git a/node_modules/@liveblocks/react-ui/dist/primitives/FileSize.mjs b/node_modules/@liveblocks/react-ui/dist/primitives/FileSize.mjs
+index d1305de..1ebbbd4 100644
+--- a/node_modules/@liveblocks/react-ui/dist/primitives/FileSize.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/primitives/FileSize.mjs
+@@ -1,9 +1,9 @@
++"use client";
+ import { jsx } from 'react/jsx-runtime';
+ import { Slot } from '@radix-ui/react-slot';
+ import { forwardRef, useMemo } from 'react';
+ import { formatFileSize } from '../utils/format-file-size.mjs';
+ 
+-"use client";
+ const FILE_SIZE_NAME = "FileSize";
+ const FileSize = forwardRef(
+   ({
+diff --git a/node_modules/@liveblocks/react-ui/dist/primitives/Timestamp.js b/node_modules/@liveblocks/react-ui/dist/primitives/Timestamp.js
+index 08e6b66..14e2e43 100644
+--- a/node_modules/@liveblocks/react-ui/dist/primitives/Timestamp.js
++++ b/node_modules/@liveblocks/react-ui/dist/primitives/Timestamp.js
+@@ -1,3 +1,4 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+@@ -8,7 +9,6 @@ var intl = require('../utils/intl.js');
+ var useInterval = require('../utils/use-interval.js');
+ var useRerender = require('../utils/use-rerender.js');
+ 
+-"use client";
+ const DYNAMIC_DATE_THRESHOLD = 3 * 24 * 60 * 60 * 1e3;
+ const RENDER_INTERVAL = 30 * 1e3;
+ const TIMESTAMP_NAME = "Timestamp";
+diff --git a/node_modules/@liveblocks/react-ui/dist/primitives/Timestamp.mjs b/node_modules/@liveblocks/react-ui/dist/primitives/Timestamp.mjs
+index 590e6e1..046556c 100644
+--- a/node_modules/@liveblocks/react-ui/dist/primitives/Timestamp.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/primitives/Timestamp.mjs
+@@ -1,3 +1,4 @@
++"use client";
+ import { jsx } from 'react/jsx-runtime';
+ import { Slot } from '@radix-ui/react-slot';
+ import { forwardRef, useMemo } from 'react';
+@@ -6,7 +7,6 @@ import { dateTimeFormat, relativeTimeFormat } from '../utils/intl.mjs';
+ import { useInterval } from '../utils/use-interval.mjs';
+ import { useRerender } from '../utils/use-rerender.mjs';
+ 
+-"use client";
+ const DYNAMIC_DATE_THRESHOLD = 3 * 24 * 60 * 60 * 1e3;
+ const RENDER_INTERVAL = 30 * 1e3;
+ const TIMESTAMP_NAME = "Timestamp";
+diff --git a/node_modules/@liveblocks/react-ui/dist/utils/Persist.js b/node_modules/@liveblocks/react-ui/dist/utils/Persist.js
+index 08c7104..b3d03b1 100644
+--- a/node_modules/@liveblocks/react-ui/dist/utils/Persist.js
++++ b/node_modules/@liveblocks/react-ui/dist/utils/Persist.js
+@@ -1,3 +1,4 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+@@ -5,7 +6,6 @@ var core = require('@liveblocks/core');
+ var react = require('react');
+ var flushSync = require('./flush-sync.js');
+ 
+-"use client";
+ const PERSIST_NAME = "Persist";
+ const PersistContext = react.createContext(null);
+ function usePersist() {
+diff --git a/node_modules/@liveblocks/react-ui/dist/utils/Persist.mjs b/node_modules/@liveblocks/react-ui/dist/utils/Persist.mjs
+index 4e7db36..a9e6687 100644
+--- a/node_modules/@liveblocks/react-ui/dist/utils/Persist.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/utils/Persist.mjs
+@@ -1,9 +1,9 @@
++"use client";
+ import { jsx } from 'react/jsx-runtime';
+ import { nn } from '@liveblocks/core';
+ import { createContext, useContext, Children, isValidElement, useRef, useLayoutEffect, useState, useCallback } from 'react';
+ import { flushSync } from './flush-sync.mjs';
+ 
+-"use client";
+ const PERSIST_NAME = "Persist";
+ const PersistContext = createContext(null);
+ function usePersist() {
+diff --git a/node_modules/@liveblocks/react-ui/dist/utils/Portal.js b/node_modules/@liveblocks/react-ui/dist/utils/Portal.js
+index b1da8ce..f2990ff 100644
+--- a/node_modules/@liveblocks/react-ui/dist/utils/Portal.js
++++ b/node_modules/@liveblocks/react-ui/dist/utils/Portal.js
+@@ -1,3 +1,4 @@
++"use client";
+ 'use strict';
+ 
+ var jsxRuntime = require('react/jsx-runtime');
+@@ -5,7 +6,6 @@ var reactSlot = require('@radix-ui/react-slot');
+ var react = require('react');
+ var ReactDOM = require('react-dom');
+ 
+-"use client";
+ const PORTAL_NAME = "Portal";
+ const Portal = react.forwardRef(
+   ({ container = document?.body, asChild, ...props }, forwardedRef) => {
+diff --git a/node_modules/@liveblocks/react-ui/dist/utils/Portal.mjs b/node_modules/@liveblocks/react-ui/dist/utils/Portal.mjs
+index c461ecd..fdf46a3 100644
+--- a/node_modules/@liveblocks/react-ui/dist/utils/Portal.mjs
++++ b/node_modules/@liveblocks/react-ui/dist/utils/Portal.mjs
+@@ -1,9 +1,9 @@
++"use client";
+ import { jsx } from 'react/jsx-runtime';
+ import { Slot } from '@radix-ui/react-slot';
+ import { forwardRef } from 'react';
+ import { createPortal } from 'react-dom';
+ 
+-"use client";
+ const PORTAL_NAME = "Portal";
+ const Portal = forwardRef(
+   ({ container = document?.body, asChild, ...props }, forwardedRef) => {
