@@ -9,7 +9,7 @@ import { RichTextPlugin } from "@lexical/react/LexicalRichTextPlugin";
 import { ContentEditable } from "@lexical/react/LexicalContentEditable";
 import { HistoryPlugin } from "@lexical/react/LexicalHistoryPlugin";
 import { LexicalErrorBoundary } from "@lexical/react/LexicalErrorBoundary";
-
+import { useThreads } from "@liveblocks/react/suspense";
 import {
   FloatingComposer,
   FloatingThreads,
@@ -17,9 +17,10 @@ import {
   LiveblocksPlugin,
   useIsEditorReady,
 } from "@liveblocks/react-lexical";
+
 import Loader from "../Loader";
 import FloatingToolbar from "./plugins/FloatingToolbar";
-import { useThreads } from "@liveblocks/react/suspense";
+import Comments from "../Comments";
 
 // Catch any errors that occur during Lexical updates and log them
 // or throw them as needed. If you don't throw them, Lexical will
@@ -79,6 +80,7 @@ export function Editor({
           <LiveblocksPlugin>
             <FloatingComposer className="w-[350px]" />
             <FloatingThreads threads={threads} />
+            <Comments />
           </LiveblocksPlugin>
         </div>
       </div>
