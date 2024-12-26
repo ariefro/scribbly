@@ -1,12 +1,13 @@
-import AddDocumentBtn from "@/components/AddDocumentBtn";
-import Header from "@/components/Header";
-import { getDocuments } from "@/lib/actions/room.actions";
-import { dateConverter } from "@/lib/utils";
-import { SignedIn, UserButton } from "@clerk/nextjs";
-import { currentUser } from "@clerk/nextjs/server";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { SignedIn, UserButton } from "@clerk/nextjs";
+import { currentUser } from "@clerk/nextjs/server";
+import AddDocumentBtn from "@/components/AddDocumentBtn";
+import { DeleteModal } from "@/components/DeleteModal";
+import Header from "@/components/Header";
+import { getDocuments } from "@/lib/actions/room.actions";
+import { dateConverter } from "@/lib/utils";
 
 const Home = async () => {
   const clerkUser = await currentUser();
@@ -60,7 +61,7 @@ const Home = async () => {
                     </p>
                   </div>
                 </Link>
-                {/* todo: delete button */}
+                <DeleteModal roomId={document.id} />
               </li>
             ))}
           </ul>
