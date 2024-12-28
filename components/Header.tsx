@@ -5,20 +5,25 @@ import Link from "next/link";
 const Header = ({ children, className }: HeaderProps) => {
   return (
     <div className={cn("header", className)}>
-      <Link href="/" className="md:flex-1">
+      <Link href="/" className="hidden md:flex">
         <Image
-          src="/assets/icons/logo.svg"
+          src="/assets/images/logo.png"
           alt="Logo with name"
-          width={120}
+          width={80}
           height={32}
-          className="hidden md:block"
+          className="md:block"
         />
+        <p className="font-extrabold hidden md:flex justify-center items-center">
+          Scribbly
+        </p>
+      </Link>
+      <Link href="/" className="md:hidden">
         <Image
-          src="/assets/icons/logo-icon.svg"
+          src="/assets/images/logo.png"
           alt="Logo with name"
-          width={32}
-          height={32}
-          className="mr-2 md:hidden"
+          width={80}
+          height={80}
+          className="mr-2"
         />
       </Link>
       {children}
