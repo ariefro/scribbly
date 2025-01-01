@@ -21,9 +21,15 @@ const Provider = ({ children }: { children: ReactNode }) => {
         return users;
       }}
       resolveMentionSuggestions={async ({ text, roomId }) => {
+        if (
+          !clerkUser?.emailAddresses ||
+          clerkUser.emailAddresses[0].emailAddress
+        ) {
+          throw new Error("User email address is missing");
+        }
         const roomUsers = await getDocumentUsers({
           roomId,
-          currentUser: clerkUser?.emailAddresses[0].emailAddress!,
+          currentUser: clerkUser?.emailAddresses[0].emailAddress,
           text,
         });
 

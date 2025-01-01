@@ -6,9 +6,9 @@ import { currentUser } from "@clerk/nextjs/server";
 import AddDocumentBtn from "@/components/AddDocumentBtn";
 import { DeleteModal } from "@/components/DeleteModal";
 import Header from "@/components/Header";
+import Notification from "@/components/Notification";
 import { getDocuments } from "@/lib/actions/room.actions";
 import { dateConverter } from "@/lib/utils";
-import Notification from "@/components/Notification";
 
 const Home = async () => {
   const clerkUser = await currentUser();
@@ -39,7 +39,7 @@ const Home = async () => {
             />
           </div>
           <ul className="document-ul">
-            {roomDocuments.data.map((document: any) => (
+            {roomDocuments.data.map((document: DocumentMetadata) => (
               <li key={document.id} className="document-list-item">
                 <Link
                   href={`/documents/${document.id}`}
