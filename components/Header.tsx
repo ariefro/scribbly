@@ -26,27 +26,6 @@ const Header = ({ children, className }: HeaderProps) => {
           className="mr-2 md:hidden"
         />
       </Link>
-      {/* <Link href="/" className="hidden md:flex">
-        <Image
-          src="/assets/images/logo.png"
-          alt="Logo with name"
-          width={80}
-          height={32}
-          className="md:block"
-        />
-        <p className="font-extrabold hidden md:flex justify-center items-center">
-          Scribbly
-        </p>
-      </Link>
-      <Link href="/" className="md:hidden">
-        <Image
-          src="/assets/images/logo.png"
-          alt="Logo with name"
-          width={80}
-          height={80}
-          className="mr-2"
-        />
-      </Link> */}
       {children}
     </div>
   );
