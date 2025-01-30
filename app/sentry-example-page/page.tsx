@@ -68,7 +68,7 @@ export default function Page() {
 
         <p>
           Next, look for the error on the{" "}
-          <a href="https://ottoman.sentry.io/issues/?project=4508510627758160">
+          <a href="https://azzam-33.sentry.io/issues/?project=4508510627758160">
             Issues Page
           </a>
           .
